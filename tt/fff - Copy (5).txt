@@ -1,0 +1,18 @@
+editing job table ...
+Query:
+First query:
+
+ALTER TABLE `jobs` ADD `jobType` VARCHAR(255) NOT NULL AFTER `jobDescription`, ADD `totalPosition` INT NOT NULL AFTER `jobType`, ADD `employmentType` VARCHAR(255) NOT NULL AFTER `totalPosition`, ADD `role` VARCHAR(255) NOT NULL AFTER `employmentType`, ADD `skill` VARCHAR(255) NOT NULL AFTER `role`, ADD `location` VARCHAR(255) NOT NULL AFTER `skill`;
+
+
+Second Query:
+
+ALTER TABLE `jobs` ADD `phone` VARCHAR(30) NOT NULL AFTER `location`;
+
+Add column "isCalled" to user table Query:
+ALTER TABLE `users` ADD `isCalled` ENUM('Yes','No') NOT NULL AFTER `registerLongitude`;
+
+Date: 9May-2018:
+query for adding new column cv in user table:
+
+ALTER TABLE `users` ADD `cv` VARCHAR(255) NOT NULL AFTER `isCalled`;
